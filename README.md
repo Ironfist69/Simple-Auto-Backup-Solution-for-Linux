@@ -20,7 +20,10 @@ src/               # Source directory containing files to back up
 dest/              # Destination directory for the backup
 /var/log/localbak.log  # Log file recording backup status
 ```
-
+## Install rsync
+- Fedora/RHEL ``` sudo dnf install rsync```
+- Debian ``` sudo apt install rsync```
+- Arch ``` sudo pacman -S rsync```
 ## Automation with Cron
 To run this backup script automatically at a scheduled time:
 
