@@ -9,11 +9,11 @@ LOG_DIR="/var/log/localbak.log"
 
 #Performing backup
 echo "Local backup started at $(date)" >> "$LOG_DIR"
-rsync -avz "$SOURCE_DIR" "$DEST_DIR" >> "$LOG_DIR" 2>&1 #For remote destination: "rsync -avz -e ssh "$SOURCE_DIR" "${DEST_USER}@${DEST_HOST}:${DEST_DIR}" >> "$LOG_FILE" 2>&1"
+rsync -avz "$SOURCE_DIR" "$DEST_DIR" >> "$LOG_DIR" 2>&1 #For remote destination: "rsync -avz -e ssh "$SOURCE_DIR" "${DEST_USER}@${DEST_HOST}:${DEST_DIR}" >> "$LOG_DIR" 2>&1"
 
 #checking condition
 if [ $? -eq 0 ]; then
-        echo "Backup completed successfully at $(date)" >> "$temp"
+        echo "Backup completed successfully at $(date)" >> "$LOG_DIR"
 else
-        echo "Backup failed :(" >> "$temp"
+        echo "Backup failed :(" >> "$LOG_DIR"
 fi
