@@ -33,11 +33,14 @@ crontab -e
 Add a cron job (e.g., to run daily at 03:30PM):
 
 ```
-30 15 * * * sudo /home/[user]/backupScript.sh
+30 15 * * * sudo ./home/[user]/backupScript.sh
 ```
 ## Make sure cron service is running
 ```sudo systemctl status crond.service```
 if not then
 ```sudo systemctl enable --now crond.service```
+
+## Make sure backupScript.sh has execution persmission
+```sudo chmod +x backupScript.sh```
 
 ## Simply fork this repo for the Bash script ;)
