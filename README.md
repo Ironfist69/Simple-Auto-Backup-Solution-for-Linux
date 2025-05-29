@@ -1,4 +1,36 @@
 # Simple-Auto-Backup-Solution-for-Linux
-#### Simple bash script for creating incremental backup in desired interval and automating it using Cron, rsync
 
+## Objective
+This project is a simple, automated backup solution using a Bash script on Linux. It utilizes rsync for efficient and reliable file synchronization from a source directory to a local (or remote) destination. Logs are generated for each backup attempt.
 
+![Screenshot 2025-05-29 211500](https://github.com/user-attachments/assets/3786f595-4f2e-4a33-9f5a-b32148bfc426)
+
+## Features
+
+- Automated local backup using rsync
+- Timestamped logging of each backup session
+- Easily configurable for remote backup
+- Lightweight and suitable for cron job scheduling
+
+## File Structure
+
+```
+backupScript.sh    # Main Bash script
+src/               # Source directory containing files to back up
+dest/              # Destination directory for the backup
+/var/log/localbak.log  # Log file recording backup status
+```
+
+## Automation with Cron
+To run this backup script automatically at a scheduled time:
+
+```
+crontab -e
+```
+Add a cron job (e.g., to run daily at 2 AM):
+
+```
+0 2 * * * /path/to/backup.sh
+```
+
+## Simply fork this repo for the Bash script ;)
