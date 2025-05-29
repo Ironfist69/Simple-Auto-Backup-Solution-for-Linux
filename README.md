@@ -35,5 +35,9 @@ Add a cron job (e.g., to run daily at 03:30PM):
 ```
 30 15 * * * /path/to/backup.sh
 ```
+## Make sure cron service is running
+```sudo systemctl status crond.service```
+if not then
+```sudo systemctl enable --now crond.service```
 
 ## Simply fork this repo for the Bash script ;)
