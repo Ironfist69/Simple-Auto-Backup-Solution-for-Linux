@@ -27,10 +27,10 @@ To run this backup script automatically at a scheduled time:
 ```
 crontab -e
 ```
-Add a cron job (e.g., to run daily at 2 AM):
+Add a cron job (e.g., to run daily at 03:30PM):
 
 ```
-0 2 * * * /path/to/backup.sh
+30 15 * * * /path/to/backup.sh
 ```
 
 ## Simply fork this repo for the Bash script ;)
