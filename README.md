@@ -33,7 +33,7 @@ crontab -e
 Add a cron job (e.g., to run daily at 03:30PM):
 
 ```
-30 15 * * * /path/to/backup.sh
+30 15 * * * sudo /home/[user]/backupScript.sh
 ```
 ## Make sure cron service is running
 ```sudo systemctl status crond.service```
